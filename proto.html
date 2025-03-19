@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('background 2.png') no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(246, 249, 249);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+           
+            padding: 20px;
+        }
+        .logo {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+        .login, #dashboard {
+            background-color: #575654; /* Dark Gray */
+            color: #FF5C00
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+        }
+        input, button {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background: #f39c12;
+            color: white;
+            cursor: pointer;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+        nav ul li a {
+            color: #f39c12;
+            text-decoration: none;
+            box-shadow: 0 8px 16px 0 rgba(239, 225, 225, 0.2), 0 6px 20px 0 rgba(240, 237, 237, 0.19);
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="DALL·E 2025-03-19 12.04.38 - A modern and minimalistic logo for 'Smart Learning Hub'. The logo should feature an open book with a glowing lightbulb above it, symbolizing knowledge copy.webp" alt="Smart Learning Hub Logo" class="logo">
+        <h1>Smart Learning Hub</h1>
+        <p>Bridging the Digital Divide for Underprivileged Children</p>
+
+
+
+    </header>
+    
+    <section class="login" id="loginSection">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    
+    <section id="dashboard" class="hidden">
+        <nav>
+            <ul>
+                <li><a href="#study-materials">Study Materials</a></li>
+                <li><a href="#video-classes">Video Classes</a></li>
+                <li><a href="#age-groups">Learning by Age</a></li>
+            </ul>
+        </nav>
+        
+        <section id="study-materials">
+            <h2>Study Materials</h2>
+            <p>Download PDFs, e-books, and notes for various subjects.</p>
+            <ul>
+                <li><a href="https://byjus.com/tn-board/tn-state-board-syllabus/">Math - Grade 1</a></li>
+                <li><a href="https://byjus.com/tn-board/tn-state-board-syllabus/">Science - Grade 5</a></li>
+                <li><a href="https://byjus.com/tn-board/tn-state-board-syllabus/">Social-Science 10</a></li>
+            </ul>
+        </section>
+        
+        <section id="video-classes">
+            <h2>Video Classes</h2>
+            <p>Watch recorded classes and tutorials.</p>
+            <ul>
+                <li><a href="https://youtu.be/biqo4NNOWHs?si=o1IXCQfi7XK_d1jt">Basic Mathematics</a></li>
+                <li><a href="https://youtu.be/Hu-JL2J6ncE?si=puVgkmf5WjpCMhXd">Physics for Beginners</a></li>
+                <li><a href="https://youtu.be/7xZPfyzBKfs?si=l9TCF-kyXorpwYVq">Advanced Programming</a></li>
+            </ul>
+        </section>
+        
+        <section id="age-groups">
+            <h2>Learning by Age</h2>
+            <p>Select your age group for tailored learning materials.</p>
+            <ul>
+                <li><a href="https://home.oxfordowl.co.uk/kids-activities/learning-activities-age-5-6/">5-10 Years</a></li>
+                <li><a href="https://byjus.com/class-4-5/">11-15 Years</a></li>
+                <li><a href="https://byjus.com/class-6-10/">16+ Years</a></li>
+            </ul>
+        </section>
+    </section>
+    
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("loginSection").classList.add("hidden");
+            document.getElementById("dashboard").classList.remove("hidden");
+        });
+    </script>
+</body>
+</html>
